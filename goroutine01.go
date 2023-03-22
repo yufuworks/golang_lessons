@@ -17,7 +17,9 @@ func goroutine2(s []int, c chan int) {
 	c <- sum
 }
 
-func main() {
+func goroutine01() {
+	fmt.Println("goroutine01 start")
+
 	s := []int{1, 2, 3, 4, 5}
 	c := make(chan int)
 	go goroutine1(s, c)
