@@ -15,9 +15,11 @@ func producer(ch chan int, i int) {
 // goroutine03でmain処理でしていたことを別のgoroutineで実行している形。
 func consumer(ch chan int, wg *sync.WaitGroup) {
 	for i := range ch {
-		fmt.Println("process", i*1000)
-		// producer一回の処理にconsumerのfor文1周を対応させる。
-		wg.Done()
+		func() {
+			// インナーfuncが実行後必ずdeferが実行されるため、処理が何かの原因で飛んだとしてもdeferは実行される。
+			defer wg.Done()
+			fmt.Println("process", i*1000)
+		}()
 	}
 	fmt.Println("#####################")
 }
