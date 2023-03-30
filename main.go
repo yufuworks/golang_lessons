@@ -4,5 +4,6 @@ func main() {
 	//goroutine01()
 	//goroutine02()
 	//goroutine03()
-	goroutine04()
+	//goroutine04()
+	goroutine05()
 }
