@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func producer2(first chan int) {
+func producer051(first chan int) {
 	defer close(first)
 	for i := 0; i < 10; i++ {
 		first <- i
@@ -31,7 +31,7 @@ func goroutine05() {
 	third := make(chan int)
 
 	// 3つのchanを使ってそれぞれのgoroutineの処理を順次渡して処理している。
-	go producer2(first)
+	go producer051(first)
 	go multi2(first, second)
 	go multi4(second, third)
 	for result := range third {
