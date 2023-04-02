@@ -6,5 +6,6 @@ func main() {
 	//goroutine03()
 	//goroutine04()
 	//goroutine05()
-	goroutine06()
+	//goroutine06()
+	goroutine07()
 }
