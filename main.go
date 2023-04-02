@@ -12,4 +12,10 @@ func main() {
 	fmt.Println(s7_package.Average(s))
 	s7_package.Say()
 	under.Hello()
+
+	person := under.Person{Name: "Mike", Age: 20}
+	fmt.Println(person)
+	person.SetHeight(180)
+	fmt.Println(person)
+	fmt.Println(under.Public)
 }
