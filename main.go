@@ -8,6 +8,7 @@ func main() {
 	//goroutine05()
 	//goroutine06()
 	//goroutine07()
-	goroutine08_1()
-	goroutine08_2()
+	//goroutine08_1()
+	//goroutine08_2()
+	goroutine09()
 }
