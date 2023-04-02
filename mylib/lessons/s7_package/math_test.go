@@ -1,6 +1,21 @@
 package s7_package
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
+
+// Example を接頭辞にしたテストメソッドにすることで、godocにソースコード凡例として載せられる。
+func ExampleAverage() {
+	v := Average([]int{1, 2, 3, 4, 5})
+	fmt.Println(v)
+}
+
+// Example 単体で書くとパッケージの凡例として解釈される。
+func Example() {
+	v := Average([]int{1, 2, 3, 4, 5})
+	fmt.Println(v)
+}
 
 //var Debug bool = true
 
