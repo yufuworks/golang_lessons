@@ -1,4 +1,4 @@
-package main
+package goroutine
 
 import "fmt"
 
@@ -17,7 +17,7 @@ func goroutine012(s []int, c chan int) {
 	c <- sum
 }
 
-func goroutine01() {
+func Goroutine01() {
 	fmt.Println("goroutine01 start")
 
 	s := []int{1, 2, 3, 4, 5}

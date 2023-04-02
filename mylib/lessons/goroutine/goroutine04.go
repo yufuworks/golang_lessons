@@ -1,4 +1,4 @@
-package main
+package goroutine
 
 import (
 	"fmt"
@@ -24,7 +24,7 @@ func consumer041(ch chan int, wg *sync.WaitGroup) {
 	fmt.Println("#####################")
 }
 
-func goroutine04() {
+func Goroutine04() {
 	var wg sync.WaitGroup
 	ch := make(chan int)
 

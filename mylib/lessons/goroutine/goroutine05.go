@@ -1,4 +1,4 @@
-package main
+package goroutine
 
 import "fmt"
 
@@ -25,7 +25,7 @@ func multi4(second chan int, third chan int) {
 	}
 }
 
-func goroutine05() {
+func Goroutine05() {
 	first := make(chan int)
 	second := make(chan int)
 	third := make(chan int)

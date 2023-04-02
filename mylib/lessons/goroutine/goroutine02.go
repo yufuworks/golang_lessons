@@ -1,8 +1,8 @@
-package main
+package goroutine
 
 import "fmt"
 
-func goroutine02() {
+func Goroutine02() {
 	fmt.Println("goroutine02 start")
 
 	ch := make(chan int, 2)

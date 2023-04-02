@@ -1,14 +1,15 @@
 package main
 
+import (
+	"awesomeProject/mylib/lessons/s7_package"
+	"awesomeProject/mylib/lessons/s7_package/under"
+	"fmt"
+)
+
 func main() {
-	//goroutine01()
-	//goroutine02()
-	//goroutine03()
-	//goroutine04()
-	//goroutine05()
-	//goroutine06()
-	//goroutine07()
-	//goroutine08_1()
-	//goroutine08_2()
-	goroutine09()
+	//goroutine.Goroutine09()
+	s := []int{1, 2, 3, 4, 5}
+	fmt.Println(s7_package.Average(s))
+	s7_package.Say()
+	under.Hello()
 }

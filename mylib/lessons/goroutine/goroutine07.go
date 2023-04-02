@@ -1,11 +1,11 @@
-package main
+package goroutine
 
 import (
 	"fmt"
 	"time"
 )
 
-func goroutine07() {
+func Goroutine07() {
 	//Tick, Afterはtimeが持つchannel
 	tick := time.Tick(100 * time.Millisecond)
 	boom := time.After(500 * time.Millisecond)

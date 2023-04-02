@@ -1,4 +1,4 @@
-package main
+package goroutine
 
 import (
 	"fmt"
@@ -21,7 +21,7 @@ func goroutine62(ch chan string) {
 	}
 }
 
-func goroutine06() {
+func Goroutine06() {
 	c1 := make(chan string)
 	c2 := make(chan string)
 	go goroutine61(c1)
