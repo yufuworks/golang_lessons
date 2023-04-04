@@ -24,7 +24,7 @@ func consumer041(ch chan int, wg *sync.WaitGroup) {
 	fmt.Println("#####################")
 }
 
-func Goroutine04() {
+func Main04() {
 	var wg sync.WaitGroup
 	ch := make(chan int)
 

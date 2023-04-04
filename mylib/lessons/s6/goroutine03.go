@@ -12,7 +12,7 @@ func goroutine031(s []int, c chan int) {
 	close(c)
 }
 
-func Goroutine03() {
+func Main03() {
 	s := []int{1, 3, 5, 7, 9}
 	// chanの容量を指定せず無制限にもできるがこれで最小にできる
 	c := make(chan int, len(s))

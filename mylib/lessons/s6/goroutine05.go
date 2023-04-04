@@ -25,7 +25,7 @@ func multi4(second chan int, third chan int) {
 	}
 }
 
-func Goroutine05() {
+func Main05() {
 	first := make(chan int)
 	second := make(chan int)
 	third := make(chan int)

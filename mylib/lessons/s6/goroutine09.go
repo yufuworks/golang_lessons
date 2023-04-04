@@ -12,7 +12,7 @@ func goroutine091(s []string, c chan string) {
 	close(c)
 }
 
-func Goroutine09() {
+func Main09() {
 	words := []string{"test1!", "test2!", "test3!", "test4!"}
 	//文字列を返すchanを作成する必要がある。
 	c := make(chan string)

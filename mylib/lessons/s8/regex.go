@@ -5,7 +5,7 @@ import (
 	"regexp"
 )
 
-func Regex() {
+func Main01() {
 	match, _ := regexp.MatchString("a([a-z]+)e", "apple")
 	fmt.Println(match)
 

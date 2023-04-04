@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func Goroutine08_1() {
+func Main081() {
 	/*
 		このまま実行すると2つのgoroutineが同時に同じmapを書き換えようとしてバッティングしてエラーが発生することがある。
 	*/
@@ -47,7 +47,7 @@ func (c *counter) Value(key string) int {
 	return c.v[key]
 }
 
-func Goroutine08_2() {
+func Main082() {
 	/*
 		mutexを使うことでアクセス制御できる構造体ができ、アクセスがバッティングしてエラーになることがなくなる。
 	*/

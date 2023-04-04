@@ -21,7 +21,7 @@ func goroutine62(ch chan string) {
 	}
 }
 
-func Goroutine06() {
+func Main06() {
 	c1 := make(chan string)
 	c2 := make(chan string)
 	go goroutine61(c1)

@@ -17,7 +17,7 @@ func goroutine012(s []int, c chan int) {
 	c <- sum
 }
 
-func Goroutine01() {
+func Main01() {
 	fmt.Println("goroutine01 start")
 
 	s := []int{1, 2, 3, 4, 5}

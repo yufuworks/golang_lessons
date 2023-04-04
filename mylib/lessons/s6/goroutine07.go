@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func Goroutine07() {
+func Main07() {
 	//Tick, Afterはtimeが持つchannel
 	tick := time.Tick(100 * time.Millisecond)
 	boom := time.After(500 * time.Millisecond)

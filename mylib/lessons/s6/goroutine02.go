@@ -2,7 +2,7 @@ package s6
 
 import "fmt"
 
-func Goroutine02() {
+func Main02() {
 	fmt.Println("goroutine02 start")
 
 	ch := make(chan int, 2)
