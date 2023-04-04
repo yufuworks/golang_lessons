@@ -1,4 +1,4 @@
-package s6_goroutine
+package s6
 
 import "fmt"
 

@@ -1,4 +1,4 @@
-package s7_package
+package s7
 
 /*
 Average returns the average of a series of numbers

@@ -1,5 +1,5 @@
-// Package s7_package is made by golang lesson
-package s7_package
+// Package s7 is made by golang lesson
+package s7
 
 import "fmt"
 
