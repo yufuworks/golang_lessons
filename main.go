@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
 	"os"
 )
 
@@ -24,12 +26,18 @@ func loadPage(title string) (*Page, error) {
 	return &Page{Title: title, Body: body}, nil
 }
 
-func main() {
-	p1 := &Page{Title: "test", Body: []byte("This is a sample Page.")}
-	if err := p1.save(); err != nil {
+func viewHandler(w http.ResponseWriter, r *http.Request) {
+	// /view/test のうちtest部分のみを切り出して、それにマッチするファイルを読み込む
+	title := r.URL.Path[len("/view/"):]
+	p, _ := loadPage(title)
+	_, err := fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", p.Title, p.Body)
+	if err != nil {
 		fmt.Println(err)
 	}
+}
 
-	p2, _ := loadPage(p1.Title)
-	fmt.Println(string(p2.Body))
+func main() {
+	http.HandleFunc("/view/", viewHandler)
+	// サーバー起動、問題があればログ出力するのでこのように書ける。この状態で動かすとlocalhostでwebサーバーが立ち上がる。
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
